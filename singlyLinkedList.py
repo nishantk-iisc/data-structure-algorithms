@@ -95,33 +95,35 @@ class SinglyLinkedList:
         return
       curr_node = curr_node.next
     print(f"{data} is not present")
-    
-sll = SinglyLinkedList()
 
-for data in range(0, 21, 4):
-  sll.appendlist(data)
-sll.traversal()
 
-sll.insert_at_beginning(24)
-sll.traversal()
+if __name__ == "__main__":
+  sll = SinglyLinkedList()
 
-sll.insert_at_end(25)
-sll.traversal()
+  for data in range(0, 21, 4):
+    sll.appendlist(data)
+  sll.traversal()
 
-sll.insert_at_index(-1, 0)
-sll.traversal()
+  sll.insert_at_beginning(24)
+  sll.traversal()
 
-sll.insert_at_index(-11, 3)
-sll.traversal()
+  sll.insert_at_end(25)
+  sll.traversal()
 
-sll.delete_at_beginning()
-sll.traversal()
+  sll.insert_at_index(-1, 0)
+  sll.traversal()
 
-sll.delete_at_end()
-sll.traversal()
+  sll.insert_at_index(-11, 3)
+  sll.traversal()
 
-sll.delete_a_value(12)
-sll.traversal()
+  sll.delete_at_beginning()
+  sll.traversal()
 
-sll.delete_a_value(7)
-sll.traversal()
+  sll.delete_at_end()
+  sll.traversal()
+
+  sll.delete_a_value(12)
+  sll.traversal()
+
+  sll.delete_a_value(7)
+  sll.traversal()
