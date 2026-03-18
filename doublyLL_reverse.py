@@ -25,3 +25,12 @@ dll.traversal()
 curr_node = dll.head
 prev_node = None
 
+while curr_node:
+  next_node = curr_node.next
+  curr_node.prev = next_node
+  curr_node.next = prev_node
+  prev_node = curr_node
+  curr_node = next_node
+
+dll.head = prev_node
+dll.traversal()
