@@ -101,6 +101,23 @@ class SinglyLinkedList:
           return
         else:
           print("Node not found")
+  
+  def delete_at_index(self, index):
+    if self.head is None:
+      return -1
+    if index == 0:
+      self.delete_at_begining()
+      return
+    prev_node = None
+    current = self.head
+    count = 0
+    while current.next and count < index:
+      prev_node = current
+      current = current.next
+      count += 1
+    prev_node.next = current.next
+    current.next = None
+    return
 
 sll = SinglyLinkedList()
 sll.delete_at_begining()
@@ -108,18 +125,29 @@ sll.delete_at_begining()
 sll.travesal()
 for i in range(1, 50, 5):
   sll.appended(i)
+print("appended")
 sll.travesal()
 sll.insert_at_beginning(0)
+print("inserted at begining")
 sll.travesal()
 sll.insert_at_end(100)  
+print("inserted at end")
 sll.travesal()
 sll.insert_at_index(2, 2)
+print("inserted at index")
 sll.travesal()
 sll.delete_at_begining()
+print("deleted at begining")
 sll.travesal()
 sll.delete_at_end()
+print("deleted at end")
 sll.travesal()
 sll.delete_a_value(7)
+print("deleted at value")
 sll.travesal()
-sll.delete_a_value(0)
+sll.delete_a_value(26)
+print("deleted at value")
+sll.travesal()
+sll.delete_at_index(2)
+print("deleted at index")
 sll.travesal()
