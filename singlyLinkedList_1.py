@@ -2,7 +2,6 @@
 # [5, add] --> [10, add] --> [15, add] --> [20, add] --> None
 
 ## create node
-from posixpath import curdir
 class Node:
   def __init__(self, data):
     self.data = data
