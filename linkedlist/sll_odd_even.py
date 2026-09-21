@@ -1,4 +1,5 @@
 from singlyLinkedList import SinglyLinkedList
+
 sll = SinglyLinkedList()
 arr = [8, 7, 1, 5, 6, 4, 9]
 for num in arr:

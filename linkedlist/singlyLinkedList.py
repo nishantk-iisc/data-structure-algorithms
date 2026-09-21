@@ -25,7 +25,7 @@ class SinglyLinkedList:
       return
     current = self.head
     while current:
-      print(current.data, end="-->")
+      print(current.data, end=" --> ")
       current = current.next
     print("none")
 
@@ -39,6 +39,7 @@ class SinglyLinkedList:
     if self.head is None:
       self.head = new_node
       return
+
     current = self.head
     while current.next:
       current = current.next
@@ -95,6 +96,23 @@ class SinglyLinkedList:
         return
       curr_node = curr_node.next
     print(f"{data} is not present")
+  
+  def delete_at_index(self, index):
+    if self.head is None:
+      print("LL is empty")
+      return 
+    if index == 0:
+      self.delete_at_begining()
+    curr_node = self.head
+    prev_node = None
+    count = 0
+    while curr_node.next and count < index:
+      prev_node = curr_node
+      curr_node = curr_node.next
+      count += 1
+    prev_node.next = curr_node.next
+    curr_node.next = None
+    return
 
 
 if __name__ == "__main__":
@@ -126,4 +144,7 @@ if __name__ == "__main__":
   sll.traversal()
 
   sll.delete_a_value(7)
+  sll.traversal()
+
+  sll.delete_at_index(2)
   sll.traversal()
