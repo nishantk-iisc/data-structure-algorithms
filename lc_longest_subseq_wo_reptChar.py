@@ -1,3 +1,6 @@
+
+## variable length sliding window problem
+
 s = "abcabcdebb"
 
 # output : 3 (abc) -> no duplicate char and should be continues..
