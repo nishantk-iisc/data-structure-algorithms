@@ -1,7 +1,7 @@
 
 ## variable length sliding window problem
 
-s = "abcabcdebb"
+s = "abcabcbb"
 
 # output : 3 (abc) -> no duplicate char and should be continues..
 
